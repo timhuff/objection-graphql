@@ -23,11 +23,15 @@ module.exports = class User extends BaseModel {
   static get relationMappings() {
     return {
       projects: {
-        relation: this.HasManyRelation,
+        relation: this.ManyToManyRelation,
         modelClass: 'Project',
         join: {
           from: 'User.id',
-          to: 'Project.ownerId',
+          through: {
+            from: 'User_Project.user_id',
+            to: 'User_Project.project_id',
+          },
+          to: 'Project.id',
         },
       },
     };

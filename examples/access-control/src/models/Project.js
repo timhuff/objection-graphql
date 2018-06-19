@@ -12,17 +12,17 @@ module.exports = class Project extends BaseModel {
     };
   }
 
-  static async modifyApiQuery(qb, { userId }) {
-    qb.where('ownerId', userId);
-  }
-
   static get relationMappings() {
     return {
-      owner: {
-        relation: this.BelongsToOneRelation,
+      projects: {
+        relation: this.ManyToManyRelation,
         modelClass: 'User',
         join: {
-          from: 'Project.ownerId',
+          from: 'Project.id',
+          through: {
+            from: 'User_Project.project_id',
+            to: 'User_Project.user_id',
+          },
           to: 'User.id',
         },
       },
