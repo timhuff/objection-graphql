@@ -14,7 +14,7 @@ module.exports = class Project extends BaseModel {
 
   static get relationMappings() {
     return {
-      projects: {
+      users: {
         relation: this.ManyToManyRelation,
         modelClass: 'User',
         join: {
@@ -29,4 +29,3 @@ module.exports = class Project extends BaseModel {
     };
   }
 };
-
