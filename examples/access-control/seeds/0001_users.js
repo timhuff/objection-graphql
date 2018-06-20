@@ -1,5 +1,5 @@
 const { Model } = require('objection');
-const { User, Project, User_Project } = require('../src/models');
+const { User, Project } = require('../src/models');
 
 exports.seed = async (knex) => {
   Model.knex(knex);
