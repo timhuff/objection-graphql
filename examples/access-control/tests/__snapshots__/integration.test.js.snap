@@ -84,24 +84,6 @@ Array [
       },
     ],
   },
-  Object {
-    "id": 3,
-    "users": Array [
-      Object {
-        "id": 3,
-        "password": null,
-        "username": "John",
-      },
-    ],
-  },
-  Object {
-    "id": 4,
-    "users": Array [],
-  },
-  Object {
-    "id": 5,
-    "users": Array [],
-  },
 ]
 `;
 
@@ -131,12 +113,7 @@ Array [
   },
   Object {
     "id": 3,
-    "projects": Array [
-      Object {
-        "id": 3,
-        "title": "Project 3",
-      },
-    ],
+    "projects": Array [],
   },
 ]
 `;
@@ -150,18 +127,6 @@ Array [
   Object {
     "id": 2,
     "title": "Project 2",
-  },
-  Object {
-    "id": 3,
-    "title": "Project 3",
-  },
-  Object {
-    "id": 4,
-    "title": "Project 4",
-  },
-  Object {
-    "id": 5,
-    "title": "Project 5",
   },
 ]
 `;
